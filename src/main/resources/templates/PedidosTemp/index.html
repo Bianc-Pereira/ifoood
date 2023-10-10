@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifoood</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Epic pedido</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="/pedido">Novos Pedidos</a></li>
+                <li><a href="#">Pendentes</a></li>
+                <li><a href="#">Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card-panel teal" th:if="${success}" th:text="${success}"></div>
+        <div class="card-panel red white-text" th:if="${error}" th:text="${error}"></div>
+
+        <h2>Pedidos Pendentes</h2>
+
+        <div class="row">
+            <div class="col s12 m6 l4" th:each="pedido : ${pedidos}" >
+                <div class="card">
+                    <div class="card-content">
+                        <div class="progress">
+                            <div class="determinate" th:style="${'width:' + pedido.status + '%'}"></div>
+                        </div>
+                        <span class="card-title" th:text="${pedido.title}"></span>
+                        <p th:text="${pedido.description}"></p>
+                        <span data-badge-caption="pontos" class="badge blue white-text" th:text="${pedido.score}"></span>
+                    </div>
+                    <div class="card-action">
+                        <a th:href="${'/pedido/delete/' + pedido.id}" class="btn red">
+                            <i class="material-icons">deletar</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
