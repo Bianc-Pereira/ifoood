@@ -6,11 +6,10 @@
 
 ## Apresentação do Projeto
 
-Este projeto é [descreva brevemente o propósito e a finalidade da aplicação].
+
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado [listar quaisquer pré-requisitos, como linguagem de programação, ferramentas ou bibliotecas necessárias]. Caso contrário, siga as instruções de instalação abaixo.
 
 ## Instalação e Execução
 
@@ -18,4 +17,4 @@ Antes de começar, certifique-se de ter instalado [listar quaisquer pré-requisi
 <summary>1. Clonar o Repositório</summary>
 
 ```shell
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Bianc-Pereira/ifoood.git
