@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Ifoood</title>
 </head>
-<body>
+
+<body class="grey lighten-2">
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Epic pedido</a>
+            <a href="#" class="brand-logo">Ifoood Pedido</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="/pedido">Novos Pedidos</a></li>
                 <li><a href="#">Pendentes</a></li>
@@ -28,15 +32,15 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="progress">
-                            <div class="determinate" th:style="${'width:' + pedido.status + '%'}"></div>
+                            <div class="determinate" th:style="${'width:' + pedido.statusentrega + '%'}"></div>
                         </div>
-                        <span class="card-title" th:text="${pedido.title}"></span>
-                        <p th:text="${pedido.description}"></p>
-                        <span data-badge-caption="pontos" class="badge blue white-text" th:text="${pedido.score}"></span>
+                        <span class="card-title" th:text="${pedido.nome}"></span>
+                        <p th:text="${pedido.pratopedido}"></p>
+                        <span data-badge-caption="quantidadeitens" class="badge blue white-text" th:text="${pedido.quantidadeitens}"></span>
                     </div>
                     <div class="card-action">
                         <a th:href="${'/pedido/delete/' + pedido.id}" class="btn red">
-                            <i class="material-icons">deletar</i>
+                            <i class="material-icons">delete</i>
                         </a>
                     </div>
                 </div>

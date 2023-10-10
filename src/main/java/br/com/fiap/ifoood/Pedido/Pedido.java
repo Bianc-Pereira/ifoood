@@ -18,15 +18,15 @@ public class Pedido {
     private Long id;
 
     @NotBlank
-    private String nomeCliente;
+    private String nome;
 
     @NotBlank
-    private String pratoPedido;
+    private String pratopedido;
 
     @Positive
-    @Min(value = 1, message = "A quantidade de itens deve ser maior que zero.")
-    private Integer quantidadeItens;
+    @Min(value = 1)
+    private Integer quantidadeitens;
 
-    private String statusEntrega;
+    private String statusentrega;
 
 }

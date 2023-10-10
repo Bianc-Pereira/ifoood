@@ -17,7 +17,7 @@ public class PedidoController {
 
     @GetMapping
     public String index(Model model) {
-        model.addAttribute("pedido", service.findAll());
+        model.addAttribute("pedidos", service.findAll());
         return "pedido/index"; // Este é o retorno que especifica o nome do template
     }
 
